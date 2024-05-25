@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+        AbarVision | Home page
+{% endblock %}  
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+      {% for i in post %}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 post">
+            <div class="in_post" dir="auto">
+                <a href="{% url 'detail' i.id %}">
+                    <img src="{{ i.image.url }}" width="100%" alt=""><br>
+                    <h5> {{ i.title|slice:"0:25" }}...</h5>
+                </a>
+               <span id="span_time">{{ i.create_time }}</span>
+            </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+
+{% endblock %}  

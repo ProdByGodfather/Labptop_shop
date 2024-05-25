@@ -1,0 +1,36 @@
+header{
+    margin: 20px;
+    padding: 30px;
+    background-color: khaki;
+}
+header a{
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.post{
+    padding: 20px;
+}
+.in_post{
+    margin: 2px;
+    background-color: khaki;
+    padding: 10px;
+
+}
+img{
+    height: 200px;
+    overflow-y: hidden;
+}
+
+#span_time{
+    font-size: 10px;
+}
+.welcome{
+    text-align: right;
+    float: right;
+
+}
+
+.margin_body{
+    margin: 20px 20px;
+}

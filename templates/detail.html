@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+        AbarVision | {{ i.title }}
+{% endblock %}  
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+           <center>
+            <div class="in_post" dir="auto">
+                    <img src="{{ i.image.url }}" alt=""><br>
+                    <h5> {{ i.title|slice:"0:25" }}...</h5>
+               <span id="span_time">{{ i.create_time }}</span>
+               <hr>
+               <p>
+                {% if user.is_authenticated %}
+                {{ i.content.html|safe }}
+                {% else %}
+                <center dir="rtl">
+                  <h2>برای دیدن توضیحات لطفا اول ثبت نام کنید یا وارد شوید.</h2>
+                  <a href="{% url 'login' %}">login</a>
+                </center>
+                {% endif %}
+               </p>
+            </div>
+           </center>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}  
